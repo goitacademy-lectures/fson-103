@@ -4,7 +4,9 @@
  * - Отримати доступ можуть тільки користувачі pro і vip
  */
 
-const sub = 'free';
+const sub = 'vip';
+const hasAccess = sub === 'pro' || sub === 'vip';
+// console.log('Does user get access?', hasAccess);
 
 /**
  * Напиши скрипт, який перевіряє можливість відкрити чат з користувачем.
@@ -16,7 +18,7 @@ const sub = 'free';
 
 const isOnline = true;
 const isFriend = true;
-const isDnd = true; // Do Not Disturb
+const isDnd = false; // Do Not Disturb
 
-// const canOpenChat = ;
-// console.log('Можна відкрити чат? ', canOpenChat);
+const canOpenChat = isOnline && isFriend && !isDnd;
+console.log('Можна відкрити чат? ', canOpenChat ? 'Так' : 'Ні');
