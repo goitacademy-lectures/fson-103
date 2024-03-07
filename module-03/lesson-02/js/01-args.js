@@ -1,43 +1,56 @@
 /**
- * Псевдомасив arguments и Array.from
+ * Псевдомасив arguments і Array.from
  */
+let res;
 
-function foo() {
-  console.log(arguments);
+function fn() {
+  // console.log(arguments);
   const args = Array.from(arguments);
-  console.log(args);
+  // console.log(args);
 }
 
-fn(1, 2, 3);
-fn(1, 2, 3, 4, 5);
-fn(1, 2, 3, 4, 5, 6, 7);
+res = fn(1, 2, 3);
+// console.log(res);
+// console.log(fn(1, 2, 3, 4, 5));
+// console.log(fn(1, 2, 3, 4, 5, 6, 7));
 
 /**
  * Напиши функцію add для складання довільної
  * кількості аргументів (чисел)
  */
 
-const add = function (arguments) {
-  const args = Array.from(arguments);
-  let total = 0;
+const add = function () {
+  let sum = 0;
+  let counter = 0;
+  // for (const argument of arguments) {
+  //   sum += argument;
+  // }
 
-  for (const arg of args) {
-    total += arg;
+  while (counter < arguments.length) {
+    sum += arguments[counter];
+    counter += 1;
   }
-
-  return total;
+  return sum;
 };
 
-console.log(add(1, 2, 3));
-console.log(add(1, 2, 4, 5, 6));
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 4, 5, 6));
 
 /**
- * Напиши функцію calAverage() яка приймає довільну кількість
+ * Напиши функцію calсAverage() яка приймає довільну кількість
  * аргументів і повертає їхнє середнє значення. Усі аргументи
  * будуть лише числами.
  */
-function calAverage() {}
+function calсAverage() {
+  // arguments = [1, 2, 3, 4]
+  let sum = 0;
+  for (const argumnet of arguments) {
+    sum += argumnet;
+  }
 
-console.log(calAverage(1, 2, 3, 4)); // 2.5
-console.log(calAverage(14, 8, 2)); // 8
-console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+  return sum / arguments.length;
+}
+
+// console.log(calсAverage(1, 2, 3, 4)); // 2.5
+// console.log(calсAverage(14, 8, 2)); // 8
+// console.log(calсAverage(27, 43, 2, 8, 36)); // 23.2

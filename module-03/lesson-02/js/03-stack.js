@@ -4,25 +4,28 @@
  */
 
 function fnA() {
-  console.log("fnA execution");
+  console.log('fnA execution');
+  fnB();
+  fnC();
 }
 
 function fnB() {
-  console.log("fnB execution");
+  console.log('fnB execution');
+  fnC();
 }
 
 function fnC() {
-  console.log("fnC execution");
+  console.log('fnC execution');
 }
 
-console.log("Before fnA execution");
+console.log('Before fnA execution');
 fnA();
-console.log("After fnA execution");
+console.log('After fnA execution');
 
-console.log("Before fnB execution");
-fnB();
-console.log("After fnB execution");
+// console.log('Before fnB execution');
+// fnB();
+// console.log('After fnB execution');
 
-console.log("Before fnC execution");
-fnC();
-console.log("After fnC execution");
+// console.log('Before fnC execution');
+// fnC();
+// console.log('After fnC execution');
