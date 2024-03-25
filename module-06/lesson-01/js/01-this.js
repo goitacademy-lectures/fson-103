@@ -16,7 +16,7 @@ function foo() {
 // foo();
 
 /**
- * Контекст методу об'єкта
+ * Контекст методу об'єкта user
  */
 
 const user = {
@@ -29,7 +29,7 @@ const user = {
 // user.showTag();
 
 /**
- * Контекст методу об'єкта, але оголошена як зовнішня функція.
+ * Контекст методу об'єкта, але showTag оголошена як зовнішня функція.
  */
 
 function showTag() {
@@ -44,12 +44,11 @@ const mango = {
 };
 
 mango.showUserTag = showTag;
-// console.log('mango', mango);
 
 // mango.showUserTag();
 
 /**
- * Виклик без контексту, але оголошена як метод об'єкта.
+ * Виклик без контексту, але showTag оголошена як метод об'єкта.
  */
 
 const poly = {
@@ -58,14 +57,28 @@ const poly = {
     console.log('showTag -> this', this);
     console.log('showTag -> this.tag', this.tag);
   },
+  addEmail(userEmail = '') {
+    if (userEmail.includes('@')) {
+      this.email = userEmail;
+    }
+  },
+};
+const ajax = {
+  tag: 'Ajax',
 };
 
-// poly.showTag();
-
-const outerShowTag = poly.showTag;
-
+// const outerShowTag = poly.showTag;
 // outerShowTag();
+// poly.showTag();
+poly.addEmail('example@mail.com');
+// console.log(poly);
 
+const ajaxEmail = poly.addEmail;
+// console.log('outerShowTag:', ajaxEmail);
+
+ajax.addOuterEmail = ajaxEmail;
+ajax.addOuterEmail('ajaxNewEmail@mail.com');
+// console.log(ajax);
 /**
  * Контекст у callback-функціях
  */
@@ -79,6 +92,7 @@ const jacob = {
 };
 
 function invokeAction(action) {
+  // action -> callback
   console.log(action);
   action();
 }

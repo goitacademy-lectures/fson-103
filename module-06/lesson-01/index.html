@@ -4,9 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>this and proto</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 20px;
+        transition: 300ms;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .counter {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        button {
+          min-width: 40px;
+          min-height: 40px;
+          padding: 0;
+          background: rebeccapurple;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background: blueviolet;
+          }
+        }
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 100px;
+          min-height: 40px;
+          border: 2px solid rebeccapurple;
+          border-radius: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <script src="./js/01-this.js" type="module"></script>
+    <!-- 03-methods.js -->
+    <!-- <div class="counter">
+      <button class="btn-decrement" type="button">-</button>
+      <p class="value">0</p>
+      <button class="btn-increment" type="button">+</button>
+    </div> -->
+
+    <!-- <script src="./js/01-this.js" type="module"></script> -->
     <!-- <script src="./js/02-tasks.js" type="module"></script> -->
     <!-- <script src="./js/03-methods.js" type="module"></script> -->
     <!-- <script src="./js/04-prototype.js" type="module"></script> -->
