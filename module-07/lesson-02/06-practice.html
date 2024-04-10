@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Search</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/modal.css" />
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
     <form action="submit" class="js-form car-search">
       <div class="car-group">
-        <input type="text" name="query" class="car-input" placeholder="Пошук" />
+        <input class="car-input" type="text" name="query" placeholder="Пошук" />
       </div>
       <div class="car-group">
-        <select name="options" class="car-select">
+        <select class="car-select" name="options">
           <option value="car">Марка</option>
           <option value="type">Модель</option>
         </select>
@@ -24,7 +23,15 @@
       <button class="car-button">Пошук</button>
     </form>
 
-    <ul class="js-list car-list"></ul>
+    <ul class="js-list car-list">
+      <!-- Generate markup -->
+      <!-- <li class="car-card" data-id="">
+        <img class="car-image" src="" alt="" />
+        <h2 class="car-title"></h2>
+        <h3 class="car-type"></h3>
+        <span class="car-price"></span>
+      </li> -->
+    </ul>
 
     <script src="./js/06-practice.js"></script>
   </body>

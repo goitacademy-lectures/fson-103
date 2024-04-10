@@ -24,3 +24,38 @@ input {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  background-color: rebeccapurple;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: 300ms;
+}
+
+.feedback-form {
+  display: grid;
+  grid-template:
+    'email pass'
+    'textarea textarea'
+    'button button';
+  gap: 16px;
+
+  max-width: 400px;
+  margin: 0 auto;
+
+  .form-input[type='email'] {
+    grid-area: email;
+  }
+  .form-input[type='password'] {
+    grid-area: pass;
+  }
+  .form-textarea {
+    grid-area: textarea;
+  }
+  .form-button {
+    grid-area: button;
+  }
+}
