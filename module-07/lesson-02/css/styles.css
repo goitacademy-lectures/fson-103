@@ -59,3 +59,49 @@ input {
     grid-area: button;
   }
 }
+
+.car-search {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 50vw;
+  padding: 10px;
+  margin-inline: auto;
+  background-color: #e1e1e1;
+  border-radius: 8px;
+}
+.car-input,
+.car-select,
+.car-button {
+  padding: 8px 16px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  transition: 300ms ease-in;
+  outline: transparent;
+
+  &:focus {
+    border-color: darkgray;
+    box-shadow: 0 0 0 4px rgba(66, 66, 66, 0.25);
+  }
+}
+.car-input {
+  height: 100%;
+}
+.car-select {
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+.car-button {
+  flex-grow: 1;
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: white;
+  background-color: rgba(66, 66, 66, 0.25);
+
+  &:hover {
+    letter-spacing: 0.3em;
+    background-color: rgba(66, 66, 66, 1);
+  }
+}

@@ -10,9 +10,15 @@
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <form action="submit" class="js-form car-search">
+    <form class="js-form car-search" autocomplete="on">
       <div class="car-group">
-        <input class="car-input" type="text" name="query" placeholder="Пошук" />
+        <input
+          class="car-input"
+          type="text"
+          name="query"
+          placeholder="Пошук"
+          autofocus
+        />
       </div>
       <div class="car-group">
         <select class="car-select" name="options">
