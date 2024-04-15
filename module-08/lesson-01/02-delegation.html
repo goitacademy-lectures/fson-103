@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Event delegation</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/02-delegation.css" />
+    <style>
+      .container {
+        outline: 2px solid red;
+        outline-offset: -2px;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <div class="container">
+      <div class="box teal" data-color="teal"></div>
+      <div class="box lightgreen" data-color="lightgreen"></div>
+      <div class="box rebeccapurple" data-color="rebeccapurple"></div>
+      <div class="box lightblue" data-color="lightblue"></div>
+      <div class="box hotpink" data-color="hotpink"></div>
+    </div>
+    <p class="box-name">&nbsp;</p>
+
+    <script src="js/02-delegation.js" type="module"></script>
+  </body>
+</html>
