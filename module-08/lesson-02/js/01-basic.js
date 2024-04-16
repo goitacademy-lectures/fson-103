@@ -3,7 +3,7 @@
  */
 
 const user = {
-  username: "Jacob name",
+  username: 'Jacob name',
   skills: {
     html: true,
     css: false,
