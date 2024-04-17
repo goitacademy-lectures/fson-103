@@ -14,7 +14,23 @@ const product = {
   },
 };
 
-function displayProductInfo() {
+// function displayProductInfo(info = {}) {
+//   const { name, price, category, brand, color, weight } = info;
+
+//   console.log(`Назва товару: ${name}`);
+//   console.log(`Ціна: ${price} грн`);
+//   console.log(`Категорія: ${category}`);
+//   console.log('Деталі:');
+//   console.log(`- Бренд: ${brand}`);
+//   console.log(`- Колір: ${color}`);
+//   console.log(`- Вага: ${weight} кг`);
+// }
+function displayProductInfo({
+  name,
+  price,
+  category,
+  details: { brand, color, weight } = {},
+} = {}) {
   console.log(`Назва товару: ${name}`);
   console.log(`Ціна: ${price} грн`);
   console.log(`Категорія: ${category}`);
@@ -25,3 +41,4 @@ function displayProductInfo() {
 }
 
 displayProductInfo(product);
+displayProductInfo();

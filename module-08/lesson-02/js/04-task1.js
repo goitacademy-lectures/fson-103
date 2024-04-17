@@ -14,7 +14,12 @@ const user = {
 
 // Деструктуризація об'єкта для отримання окремих змінних
 
+const {
+  username,
+  profile: { name: firstName, surname: secondName },
+} = user;
+
 // Виведення отриманих значень
-// console.log(`Ім'я користувача: ${name}`);
-// console.log(`Прізвище користувача: ${surname}`);
-// console.log(`Ім'я користувача (за нікнеймом): ${username}`);
+console.log(`Ім'я користувача: ${firstName}`);
+console.log(`Прізвище користувача: ${secondName}`);
+console.log(`Ім'я користувача (за нікнеймом): ${username}`);

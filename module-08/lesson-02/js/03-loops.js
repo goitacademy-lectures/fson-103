@@ -19,8 +19,10 @@ const users = [
  */
 const names = [];
 
-for (const user of users) {
-  names.push(user.name);
+for (const { name } of users) {
+  // console.log(user);
+  // names.push(user.name);
+  names.push(name);
 }
 
 console.log(names);
