@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Practice: feedback form</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/feedback.css" />
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <form class="feedback-form">
+      <label>
+        <b>Name</b>
+        <input
+          type="text"
+          name="userName"
+          placeholder="Enter your name"
+          value="Anonimus"
+        />
+      </label>
+      <label>
+        <b>Message</b>
+        <textarea name="userMessage" rows="6"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+      defer
+    ></script>
+    <script src="js/02-feedback.js" defer></script>
+  </body>
+</html>
