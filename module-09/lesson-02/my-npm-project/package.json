@@ -1,0 +1,25 @@
+{
+  "name": "my-npm-project",
+  "version": "0.0.1",
+  "description": "NPM packeges node.js",
+  "main": "app.js",
+  "scripts": {
+    "show-msg": "echo \"Message from package.json\"",
+    "build": "babel src -d dist"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "npm"
+  ],
+  "author": "YK",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4"
+  }
+}
