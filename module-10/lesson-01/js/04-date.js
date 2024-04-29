@@ -1,4 +1,4 @@
-/*
+/**
  - Створення
  - Unix-час
  - Методи
@@ -6,5 +6,5 @@
  - Date.now()
 */
 
-const date1 = Date.now();
-console.log("date1", date1);
+// const date1 = Date.now();
+// console.log('date1', date1);
