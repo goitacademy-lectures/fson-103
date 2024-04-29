@@ -6,18 +6,31 @@
  */
 
 // const NOTIFICATION_DELAY = 3000;
-// let timeoutId = null;
+let timeoutId = null;
 const notification = document.querySelector('.js-alert');
 
+showNotification();
 /**
  * Функції
  */
-function onNotificationClick() {}
-
-function showNotification() {
-  console.log(
-    'Закриваємо сповіщення автоматично, щоб воно не залишалося відкритим'
-  );
+function onNotificationClick() {
+  hideNotification();
+  clearTimeout(timeoutId);
 }
 
-function hideNotification() {}
+function showNotification() {
+  notification.classList.add('is-visible');
+
+  timeoutId = setTimeout(() => {
+    hideNotification();
+    console.log(
+      'Закриваємо сповіщення автоматично, щоб воно не залишалося відкритим'
+    );
+  }, 5000);
+}
+
+function hideNotification() {
+  notification.classList.remove('is-visible');
+}
+
+notification.addEventListener('click', onNotificationClick);
