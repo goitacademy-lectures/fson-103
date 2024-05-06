@@ -11,6 +11,36 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      .position {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #0d0d0d;
+        border-bottom-color: #ff3d00;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+      .loader.is-hidden {
+        opacity: 0;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
@@ -23,6 +53,7 @@
       <button type="submit" class="btn btn-primary">Search</button>
     </form>
 
+    <span class="loader position is-hidden"></span>
     <div class="card-container"></div>
 
     <script src="js/03-practice.js"></script>
