@@ -9,7 +9,7 @@ const searchFormEl = document.querySelector('.js-search-form');
 const galleryEl = document.querySelector('.js-gallery');
 const loaderEl = document.querySelector('.js-loader');
 
-function onSearchFormSubmit(event) {
+async function onSearchFormSubmit(event) {
   event.preventDefault();
   const searchQuery = event.target.elements.searchKeyword.value.trim();
 
@@ -29,24 +29,26 @@ function onSearchFormSubmit(event) {
   galleryEl.innerHTML = '';
   loaderEl.classList.remove('is-hidden');
 
-  fetchPhotosByQuery(searchQuery)
-    .then(imagesData => {
-      if (imagesData.total === 0) {
-        iziToast.show({
-          message: 'Sorry, there are no images for this query',
-          position: 'topRight',
-          timeout: 2000,
-          color: 'red',
-        });
-      }
+  try {
+    const { data } = await fetchPhotosByQuery(searchQuery);
 
-      galleryEl.innerHTML = createGalleryItemMarkup(imagesData.results);
-    })
-    .catch(error => console.log(error))
-    .finally(() => {
-      event.target.reset();
-      loaderEl.classList.add('is-hidden');
-    });
+    if (data.total === 0) {
+      iziToast.show({
+        message: 'Sorry, there are no images for this query',
+        position: 'topRight',
+        timeout: 2000,
+        color: 'red',
+      });
+      return;
+    }
+
+    galleryEl.innerHTML = createGalleryItemMarkup(data.results);
+  } catch (error) {
+    console.log(error);
+  }
+
+  event.target.reset();
+  loaderEl.classList.add('is-hidden');
 }
 
 searchFormEl.addEventListener('submit', onSearchFormSubmit);
