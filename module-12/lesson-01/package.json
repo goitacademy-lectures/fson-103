@@ -1,0 +1,25 @@
+{
+  "name": "module-12-lesson-01",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=//",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.5.2",
+    "sass": "^1.77.0",
+    "glob": "^8.1.0"
+  },
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "izitoast": "^1.4.0",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-html-inject": "^1.0.1"
+  }
+}
