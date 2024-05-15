@@ -1,0 +1,8 @@
+$enable-cssgrid: true;
+@import 'bootstrap/scss/bootstrap';
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

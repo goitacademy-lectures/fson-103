@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination</title>
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body class="p-3 m-0 border-0">
+    <!-- #region Search form -->
+    <form class="w-50 mx-auto js-search-form" name="newsForm">
+      <div class="input-group mb-3">
+        <input
+          class="form-control js-search-input"
+          type="text"
+          name="newsKeyword"
+          placeholder="Find news..."
+          required
+        />
+        <button class="btn btn-primary" type="submit" id="button-addon2">
+          <span class="text-white">Search news</span>
+        </button>
+      </div>
+    </form>
+    <!-- #endregion -->
+
+    <!-- #region News card container -->
+    <div class="grid js-cards-container">
+      <!-- <article class="card g-col-4">
+        <img
+          class="card-img-top"
+          src="https://ichef.bbci.co.uk/news/1024/branded_news/4303/production/_133155171_gettyimages-1231348679.jpg"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <a href="#" class="btn btn-primary">
+            <span class="text-white">Read more</span>
+          </a>
+        </div>
+      </article>
+      <article class="card g-col-4">
+        <img
+          class="card-img-top"
+          src="https://ichef.bbci.co.uk/news/1024/branded_news/4303/production/_133155171_gettyimages-1231348679.jpg"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <a href="#" class="btn btn-primary">
+            <span class="text-white">Read more</span>
+          </a>
+        </div>
+      </article>
+      <article class="card g-col-4">
+        <img
+          class="card-img-top"
+          src="https://ichef.bbci.co.uk/news/1024/branded_news/4303/production/_133155171_gettyimages-1231348679.jpg"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <a href="#" class="btn btn-primary">
+            <span class="text-white">Read more</span>
+          </a>
+        </div>
+      </article> -->
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Load more button -->
+    <div class="d-flex justify-content-center p-3">
+      <!-- <button
+        class="btn btn-primary text-light d-flex align-items-center js-load-more"
+      >
+        <span
+          class="spinner-border spinner-border-sm js-loader"
+          aria-hidden="true"
+        >
+        </span>
+        <span class="ms-1">Load more</span>
+      </button> -->
+    </div>
+    <!-- #endregion -->
+  </body>
+</html>

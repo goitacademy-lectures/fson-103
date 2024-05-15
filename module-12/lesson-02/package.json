@@ -1,0 +1,21 @@
+{
+  "name": "lesson-02",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "glob": "^8.1.0",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "izitoast": "^1.4.0",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-html-inject": "^1.0.1"
+  }
+}
